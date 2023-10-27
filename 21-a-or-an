@@ -1,0 +1,9 @@
+public String aOrAn(String word) {
+    //code here
+    String vowels = 'aeiouAEIOU';
+    if (vowels.contains(word.substring(0,1))) {
+        return 'an ' + word;
+    } else {
+        return 'a ' + word;
+    }
+}
