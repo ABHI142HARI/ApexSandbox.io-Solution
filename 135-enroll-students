@@ -10,6 +10,7 @@ public void enrollStudents(List<String> emails, String className) {
         cenRoll.apxio__Student__c = str.Id;
         cenRoll.apxio__Offered_Class__c = enrlList[0].Id;
         enrollments.add(cenRoll);
+    
     }
     }
     
