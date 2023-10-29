@@ -11,7 +11,7 @@ public void enrollStudents(List<String> emails, String className) {
         enrollments.add(cenRoll);
     }
 
-    if(!enrollments.isEmpty){
+    if(!enrollments.isEmpty()){
         insert enrollments;
     }
 
