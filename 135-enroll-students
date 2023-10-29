@@ -1,7 +1,7 @@
 public void enrollStudents(List<String> emails, String className) {
     // code here
     List<apxio__Class_Enrollment__c> enrollments = new List<apxio__Class_Enrollment__c>(); //Initializing list for enrollments
-    List<apxio__Student__c> stList =[SELECT id FROM apxio__Student__c WHERE Id :emails ];
+    List<apxio__Student__c> stList =[SELECT id FROM apxio__Student__c WHERE id :emails ];
     List<apxio__Class__c> enrlList = [SELECT ID FROM apxio__Class__c WHERE id :className];
 
     for(apxio__Student__c str : stList){
