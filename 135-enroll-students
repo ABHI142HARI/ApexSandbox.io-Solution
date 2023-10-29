@@ -9,12 +9,10 @@ public void enrollStudents(List<String> emails, String className) {
         apxio__Class_Enrollment__c cenRoll = new apxio__Class_Enrollment__c();
         cenRoll.apxio__Student__c = str.Id;
         cenRoll.apxio__Offered_Class__c = enrlList[0].Id;
-        enrollments.add(cenRoll);
-    
+        enrollments.add(cenRoll); 
+        }
     }
-    }
     
-
     if(!enrollments.isEmpty()){
         insert enrollments;
     }
