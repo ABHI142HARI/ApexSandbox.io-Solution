@@ -4,12 +4,15 @@ public void enrollStudents(List<String> emails, String className) {
     List<apxio__Student__c> stList =[SELECT Id FROM apxio__Student__c WHERE apxio__Email__c :emails ];
     List<apxio__Class__c> enrlList = [SELECT Id FROM apxio__Class__c WHERE Name :className];
 
-    for(apxio__Student__c str : stList){
+    if(!stList.isEmpty() && !enrlList.isEmpty()){
+        for(apxio__Student__c str : stList){
         apxio__Class_Enrollment__c cenRoll = new apxio__Class_Enrollment__c();
         cenRoll.apxio__Student__c = str.Id;
         cenRoll.apxio__Offered_Class__c = enrlList[0].Id;
         enrollments.add(cenRoll);
     }
+    }
+    
 
     if(!enrollments.isEmpty()){
         insert enrollments;
