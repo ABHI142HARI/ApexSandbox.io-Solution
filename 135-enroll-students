@@ -5,7 +5,7 @@ public void enrollStudents(List<String> emails, String className) {
     List<apxio__Class__c> enrlList = [SELECT ID FROM apxio__Class__c WHERE id :className];
 
     for(apxio__Student__c str : stList){
-        apxio__Class_Enrollment__c cenRoll = new apxio__Class_Enrollment__c():
+        apxio__Class_Enrollment__c cenRoll = new apxio__Class_Enrollment__c();
         cenRoll.apxio__Student__c = str.id;
         cenRoll.apxio__Offered_Class__c = enrList[0].id;
         enrollments.add(cenRoll);
