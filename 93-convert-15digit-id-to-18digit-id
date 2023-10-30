@@ -1,13 +1,5 @@
 public String convert15to18DigitId(String fifteenDigit)
 {
     //code here
-     if (inputId != null && inputId.length() == 15) {
-            // Add the three-character '000' key prefix to the 15-digit ID.
-            String keyPrefix = '000';
-            String newId = keyPrefix + inputId;
-            return newId;
-        } else {
-            // If the input is not 15 characters long, return '-1'.
-            return '-1';
-        }
+     return  String.isBlank(fifteenDigit) ? '-1' : fifteenDigit.length()< 15 ?'-1' : (Id)fifteenDigit ;
 }
