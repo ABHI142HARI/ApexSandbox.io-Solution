@@ -9,6 +9,6 @@ public Boolean isTypeAccount(sObject record)
 
     // }else
     // return false;
-     return obj instanceof Account;
+     return record instanceof Account;
 
 }
