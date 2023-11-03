@@ -1,9 +1,9 @@
 public String divide(Integer a, Integer b){
     //code here
     try {
-        String int = string.valueof(Integer a/Interger b);
+        String int = string.valueof(a/b);
         return divide        
-    }catch(b==0) {
+    }catch(ArithmaticException e) {
         System.debug('The following exception has occurred: ' + e.getMessage());
     }
     
