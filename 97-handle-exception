@@ -3,8 +3,8 @@ public String divide(Integer a, Integer b){
     try {
         
         return String.valueOf(a/b);       
-    }catch(ArithmaticException e) {
-        System.debug('The following exception has occurred: ' + e.getMessage());
+    }catch(Exception e) {
+        return e.getMessage();
     }
     
 }
