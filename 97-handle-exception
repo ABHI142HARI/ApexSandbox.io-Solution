@@ -1,7 +1,7 @@
 public String divide(Integer a, Integer b){
     //code here
     try {
-        Integer int = String.valueOf(divide(a/b));
+        String int = String.valueOf(divide(a/b));
         return int        
     }catch(ArithmaticException e) {
         System.debug('The following exception has occurred: ' + e.getMessage());
